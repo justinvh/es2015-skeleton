@@ -1,13 +1,14 @@
 {
   "env": {
     "production": {
-      "presets": ["es2015-rollup"]
+      "presets": ["es2015-rollup", "stage-0"]
     },
     "test": {
-      "presets": ["es2015"]
+      "presets": ["es2015", "stage-0"]
     },
     "development": {
-      "presets": ["es2015-rollup"]
+      "presets": ["es2015-rollup", "stage-0"]
     }
-  }
+  },
+  "plugins": [["typecheck", { "disable": { "production": true }}], "syntax-flow", "transform-flow-strip-types"]
 }

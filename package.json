@@ -6,10 +6,16 @@
   "main": "dist/myproject.js",
   "scripts": {
     "test": "BABEL_ENV=test ./node_modules/.bin/babel-node ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha",
-    "watch": "BABEL_ENV=development ./node_modules/rollup/bin/rollup -c -w",
-    "rollup": "BABEL_ENV=development ./node_modules/rollup/bin/rollup -c",
-    "lint": "BABEL_ENV=development ./node_modules/eslint/bin/eslint.js src test",
-    "build": "npm run lint && npm run rollup",
+
+    "watch": "./node_modules/.bin/rollup -c -w",
+    "rollup": "./node_modules/.bin/rollup -c",
+    "eslint": "./node_modules/.bin/eslint src test",
+    "flow": "./node_modules/.bin/flow check",
+
+    "lint": "npm run eslint && npm run flow",
+    "build-dev": "npm run lint && npm run rollup",
+    "build": "npm run lint && NODE_ENV=production npm run rollup",
+
     "prepublish": "npm run build",
     "pretest": "npm run build"
   },
@@ -19,18 +25,25 @@
     "babel-cli": "^6.11.4",
     "babel-core": "^6.11.4",
     "babel-eslint": "^6.1.2",
+    "babel-plugin-syntax-flow": "^6.8.0",
+    "babel-plugin-transform-flow-strip-types": "^6.8.0",
+    "babel-plugin-typecheck": "^3.9.0",
     "babel-preset-es2015-rollup": "^1.1.1",
+    "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.11.6",
     "chai": "^3.5.0",
     "eslint": "^3.1.1",
+    "eslint-plugin-flowtype": "^2.4.0",
+    "flow": "^0.2.3",
+    "flow-bin": "^0.29.0",
+    "istanbul": "^0.4.4",
     "mocha": "^2.5.3",
+    "requirejs": "^2.2.0",
+    "rollup": "^0.34.1",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-commonjs": "^3.3.1",
     "rollup-plugin-json": "^2.0.1",
     "rollup-plugin-node-resolve": "^1.7.1",
-    "rollup-plugin-uglify": "^1.0.1",
-    "rollup": "^0.34.1",
-    "istanbul": "^0.4.4",
-    "requirejs": "^2.2.0"
+    "rollup-plugin-uglify": "^1.0.1"
   }
 }
