@@ -1,25 +1,19 @@
 This is a dead-simple ES2015 sandbox with enough to get walking.
+General philosophy of this repository is that the usage of a package
+must be 1-to-1 with a concept required.
 
-Should give you:
+Concepts:
 
-* es2015
-* Unit testing
-* Code coverage
-* Tree shaking
-* code linting
-* minifier
-* type checking
+* es2015 (Babel)
+* Unit testing (Mocha + Chai)
+* Code coverage (Istanbul)
+* Tree shaking (Rollup)
+* code linting (Eslint)
+* type checking (Flow)
+* uglifier (Uglify)
+* build system (npm)
 
-Uses:
-
-* Babel - For your es2015 stuff.
-* Istanbul - For coverage
-* Chai - For unit tests
-* Rollup - Does all that tree shaking fun-ness
-* Mocha - For testing
-* Flow - Type checking
-
-You use it sort-of like:
+Usage:
 
 * `npm install`: To get your dependencies
 * `npm run-script lint`: Eslint + Flow
