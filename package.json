@@ -1,0 +1,36 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "repository": "https://github.com/justinvh/es2015-skeleton.git",
+  "description": "A sample workflow",
+  "main": "dist/myproject.js",
+  "scripts": {
+    "test": "BABEL_ENV=test ./node_modules/.bin/babel-node ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha",
+    "watch": "BABEL_ENV=development ./node_modules/rollup/bin/rollup -c -w",
+    "rollup": "BABEL_ENV=development ./node_modules/rollup/bin/rollup -c",
+    "lint": "BABEL_ENV=development ./node_modules/eslint/bin/eslint.js src test",
+    "build": "npm run lint && npm run rollup",
+    "prepublish": "npm run build",
+    "pretest": "npm run build"
+  },
+  "author": "Justin Bruce Van Horne <justinvh@gmail.com>",
+  "license": "CPL-1.0",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.11.4",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "babel-register": "^6.11.6",
+    "chai": "^3.5.0",
+    "eslint": "^3.1.1",
+    "mocha": "^2.5.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-commonjs": "^3.3.1",
+    "rollup-plugin-json": "^2.0.1",
+    "rollup-plugin-node-resolve": "^1.7.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup": "^0.34.1",
+    "istanbul": "^0.4.4",
+    "requirejs": "^2.2.0"
+  }
+}

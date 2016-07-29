@@ -1,0 +1,2 @@
+!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?n(exports):"function"==typeof define&&define.amd?define(["exports"],n):n(e.MyProject=e.MyProject||{})}(this,function(e){"use strict";var n="1.0.0",t=function(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")},o=function e(){t(this,e)};e.MyClass=o,e.version=n,Object.defineProperty(e,"__esModule",{value:!0})});
+//# sourceMappingURL=myproject.js.map

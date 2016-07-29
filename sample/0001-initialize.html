@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="../node_modules/requirejs/require.js"></script>
+        <script>
+            requirejs(['../dist/myproject.js'], (MyProject) => {
+                console.log(MyProject.MyClass);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="iris" style="width: 100px; height: 100px;"></div>
+    </body>
+</html>

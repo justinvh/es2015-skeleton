@@ -1,0 +1,1 @@
+{"version":3,"file":null,"sources":["../src/myclass.js"],"sourcesContent":["// import THREE from \"three\";\n// import $ from \"jquery\";\n\nclass MyClass {}\n\nexport { MyClass };\n"],"names":["MyClass"],"mappings":"sTAGMA"}
