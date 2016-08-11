@@ -5,7 +5,7 @@
   "description": "A sample workflow",
   "main": "dist/myproject.js",
   "scripts": {
-    "test": "cross-env BABEL_ENV=test babel-node ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha",
+    "test": "cross-env BABEL_ENV=test babel-node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
     "watch": "rollup -c -w",
     "rollup": "rollup -c",
     "eslint": "eslint src test",
